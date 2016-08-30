@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F8498061D75B64900C3E9A7 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8498051D75B64900C3E9A7 /* Food.m */; };
 		AC903EC71D7475FF00E6B43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC61D7475FF00E6B43A /* main.m */; };
 		AC903ECA1D7475FF00E6B43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC91D7475FF00E6B43A /* AppDelegate.m */; };
 		AC903ECD1D7475FF00E6B43A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903ECC1D7475FF00E6B43A /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F8498041D75B64900C3E9A7 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		9F8498051D75B64900C3E9A7 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		AC903EC21D7475FF00E6B43A /* iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC903EC61D7475FF00E6B43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC903EC81D7475FF00E6B43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				AC903ED31D7475FF00E6B43A /* LaunchScreen.storyboard */,
 				AC903ED61D7475FF00E6B43A /* Info.plist */,
 				AC903EC51D7475FF00E6B43A /* Supporting Files */,
+				9F8498041D75B64900C3E9A7 /* Food.h */,
+				9F8498051D75B64900C3E9A7 /* Food.m */,
 			);
 			path = iFood;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC903ECD1D7475FF00E6B43A /* ViewController.m in Sources */,
+				9F8498061D75B64900C3E9A7 /* Food.m in Sources */,
 				AC903ECA1D7475FF00E6B43A /* AppDelegate.m in Sources */,
 				AC903EC71D7475FF00E6B43A /* main.m in Sources */,
 			);
@@ -302,6 +308,7 @@
 				AC903EDB1D7475FF00E6B43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
