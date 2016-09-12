@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9UC-dh-1rJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -47,12 +47,70 @@
                             <constraint firstItem="fWT-RK-D8s" firstAttribute="top" secondItem="Dzc-IC-SX4" secondAttribute="bottom" constant="25" id="rcD-Kz-L0I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="aqA-bU-uA6"/>
                     <connections>
                         <outlet property="imageView" destination="Dzc-IC-SX4" id="hh4-rs-uhd"/>
                         <outlet property="textField" destination="fWT-RK-D8s" id="BuV-Ca-udR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="305"/>
+        </scene>
+        <!--Menu V-->
+        <scene sceneID="Ws8-lt-RqY">
+            <objects>
+                <viewController id="B8U-0k-Pwi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Hf-6X-PJ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="RvJ-TW-bVq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RBz-YB-CDs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu V" id="AHy-Nt-fRA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqY-bi-Qcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="1090"/>
+        </scene>
+        <!--Menu H-->
+        <scene sceneID="7fU-nc-ZlZ">
+            <objects>
+                <viewController id="Ca8-O2-px1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BaK-0m-c2c"/>
+                        <viewControllerLayoutGuide type="bottom" id="1LH-pL-88g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3a-ZG-upp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu H" id="zQy-RH-M0q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rlg-5s-ekS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="1794"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lAn-96-jX1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9UC-dh-1rJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TrE-bE-of0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dLx-i1-R9C"/>
+                        <segue destination="B8U-0k-Pwi" kind="relationship" relationship="viewControllers" id="Lm8-wS-AeQ"/>
+                        <segue destination="Ca8-O2-px1" kind="relationship" relationship="viewControllers" id="wcY-6G-xWm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nya-pU-vj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
         </scene>
