@@ -12,7 +12,8 @@
 
 @interface MenuListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *foods;
+@property (nonatomic, strong) NSMutableArray *foods;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -22,27 +23,72 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Food *spaghetti = [[Food alloc] init];
-    spaghetti.name = @"Spaghetti";
-    spaghetti.foodImage = @"spaghetti";
-    spaghetti.foodDescription = @"Con queso gorgonzola, parmesano, trocitos de tocino y un toque de pan molido.";
-    
-    Food *fish = [[Food alloc] init];
-    fish.name = @"Filete de pescado";
-    fish.foodImage = @"fish";
-    fish.foodDescription = @"Montado sobre papa martajada, bañado con salsa de jitomate, aceitunas negras, alcaparras y supremas de naranja.";
-    
-    Food *chicken = [[Food alloc] init];
-    chicken.name = @"Pechuga de pollo";
-    chicken.foodImage = @"chicken";
-    chicken.foodDescription = @"Marinada en aceite de oliva, romero y ajo. Servida con berenjenas a la parrilla.";
-    
-    self.foods = [NSArray arrayWithObjects:spaghetti, fish, chicken, nil];
+    [self remoteCall];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) remoteCall {
+    
+    NSString *url = @"https://api.myjson.com/bins/2f2qi";
+    
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    
+    // De esta forma, evitamos tener problemas de memoria al hacer referencia a self dentro de un bloque
+    
+    __weak MenuListViewController *weakSelf = self;
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error)
+        {
+            // Successful Response
+            if ([response isKindOfClass:[NSHTTPURLResponse class]])
+            {
+                // Utilizamos NSJSONSerialization para convertir el JSON recibido en un Dictionary.
+                NSError *jsonError;
+                NSArray *jsonResponse = [NSJSONSerialization    JSONObjectWithData:data options:0 error:&jsonError];
+                if (!jsonError)
+                {
+                    // Success Parsing JSON
+                    // Procesamos la info para actualizar nuestra tabla, siempre en el main thread
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        weakSelf.foods = [[NSMutableArray alloc] init];
+                        
+                        for (NSDictionary *element in jsonResponse){
+                            
+                            Food *food = [[Food alloc] init];
+                            food.name = [element objectForKey:@"name"];
+                            food.foodImage = [element objectForKey:@"foodImage"];
+                            food.foodDescription = [element objectForKey:@"foodDescription"];
+                            
+                            [weakSelf.foods addObject:food];
+                        }
+                        
+                        [weakSelf.tableView reloadData];
+                        
+                    });
+                }
+            }
+            else
+            {
+                //El servicio devuelve un error
+            }
+        }
+        else
+        {
+            // Error
+            NSLog(@"error : %@", error.description);
+        }
+    }];
+    
+    [dataTask resume];
+    
 }
 
 #pragma mark UITableViewDataSource
