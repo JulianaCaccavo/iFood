@@ -1,22 +1,22 @@
 //
-//  MenuGrillViewController.m
+//  MenuGridViewController.m
 //  iFood
 //
 //  Created by Ezequiel Gutierrez on 16/9/16.
 //  Copyright © 2016 Acamica. All rights reserved.
 //
 
-#import "MenuGrillViewController.h"
+#import "MenuGridViewController.h"
 #import "Food.h"
 #import "FoodCollectionViewCell.h"
 
-@interface MenuGrillViewController () <UICollectionViewDataSource>
+@interface MenuGridViewController () <UICollectionViewDataSource>
 
 @property (nonatomic, strong) NSArray *foods;
 
 @end
 
-@implementation MenuGrillViewController
+@implementation MenuGridViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

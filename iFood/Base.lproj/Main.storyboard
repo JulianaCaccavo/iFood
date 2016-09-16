@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="1059" y="1090"/>
         </scene>
-        <!--Grill-->
+        <!--Grid-->
         <scene sceneID="7fU-nc-ZlZ">
             <objects>
-                <viewController id="Ca8-O2-px1" customClass="MenuGrillViewController" sceneMemberID="viewController">
+                <viewController id="Ca8-O2-px1" userLabel="Grid" customClass="MenuGridViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BaK-0m-c2c"/>
                         <viewControllerLayoutGuide type="bottom" id="1LH-pL-88g"/>
@@ -209,7 +209,7 @@
                             <constraint firstItem="Tjd-1D-DP4" firstAttribute="top" secondItem="BaK-0m-c2c" secondAttribute="bottom" id="jsA-g7-NNs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Grill" id="zQy-RH-M0q"/>
+                    <tabBarItem key="tabBarItem" title="Grid" id="zQy-RH-M0q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rlg-5s-ekS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

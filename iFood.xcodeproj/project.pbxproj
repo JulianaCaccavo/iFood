@@ -10,7 +10,7 @@
 		378D93371D8B93D000B09A98 /* MenuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378D93361D8B93D000B09A98 /* MenuListViewController.m */; };
 		378D933A1D8B946400B09A98 /* FoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 378D93391D8B946400B09A98 /* FoodTableViewCell.m */; };
 		378D933D1D8BACC600B09A98 /* FoodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 378D933C1D8BACC600B09A98 /* FoodCollectionViewCell.m */; };
-		378D93401D8BACE100B09A98 /* MenuGrillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378D933F1D8BACE100B09A98 /* MenuGrillViewController.m */; };
+		378D93401D8BACE100B09A98 /* MenuGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378D933F1D8BACE100B09A98 /* MenuGridViewController.m */; };
 		9F8498061D75B64900C3E9A7 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8498051D75B64900C3E9A7 /* Food.m */; };
 		AC903EC71D7475FF00E6B43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC61D7475FF00E6B43A /* main.m */; };
 		AC903ECA1D7475FF00E6B43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC91D7475FF00E6B43A /* AppDelegate.m */; };
@@ -27,8 +27,8 @@
 		378D93391D8B946400B09A98 /* FoodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTableViewCell.m; sourceTree = "<group>"; };
 		378D933B1D8BACC600B09A98 /* FoodCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCollectionViewCell.h; sourceTree = "<group>"; };
 		378D933C1D8BACC600B09A98 /* FoodCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCollectionViewCell.m; sourceTree = "<group>"; };
-		378D933E1D8BACE100B09A98 /* MenuGrillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuGrillViewController.h; sourceTree = "<group>"; };
-		378D933F1D8BACE100B09A98 /* MenuGrillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuGrillViewController.m; sourceTree = "<group>"; };
+		378D933E1D8BACE100B09A98 /* MenuGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuGridViewController.h; sourceTree = "<group>"; };
+		378D933F1D8BACE100B09A98 /* MenuGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuGridViewController.m; sourceTree = "<group>"; };
 		9F8498041D75B64900C3E9A7 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
 		9F8498051D75B64900C3E9A7 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		AC903EC21D7475FF00E6B43A /* iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +79,8 @@
 				AC903ECC1D7475FF00E6B43A /* ViewController.m */,
 				378D93351D8B93D000B09A98 /* MenuListViewController.h */,
 				378D93361D8B93D000B09A98 /* MenuListViewController.m */,
-				378D933E1D8BACE100B09A98 /* MenuGrillViewController.h */,
-				378D933F1D8BACE100B09A98 /* MenuGrillViewController.m */,
+				378D933E1D8BACE100B09A98 /* MenuGridViewController.h */,
+				378D933F1D8BACE100B09A98 /* MenuGridViewController.m */,
 				378D93381D8B946400B09A98 /* FoodTableViewCell.h */,
 				378D93391D8B946400B09A98 /* FoodTableViewCell.m */,
 				378D933B1D8BACC600B09A98 /* FoodCollectionViewCell.h */,
@@ -176,7 +176,7 @@
 			files = (
 				378D933D1D8BACC600B09A98 /* FoodCollectionViewCell.m in Sources */,
 				AC903ECD1D7475FF00E6B43A /* ViewController.m in Sources */,
-				378D93401D8BACE100B09A98 /* MenuGrillViewController.m in Sources */,
+				378D93401D8BACE100B09A98 /* MenuGridViewController.m in Sources */,
 				9F8498061D75B64900C3E9A7 /* Food.m in Sources */,
 				378D93371D8B93D000B09A98 /* MenuListViewController.m in Sources */,
 				AC903ECA1D7475FF00E6B43A /* AppDelegate.m in Sources */,

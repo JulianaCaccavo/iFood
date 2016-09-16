@@ -1,5 +1,5 @@
 //
-//  MenuGrillViewController.h
+//  MenuGridViewController.h
 //  iFood
 //
 //  Created by Ezequiel Gutierrez on 16/9/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuGrillViewController : UIViewController
+@interface MenuGridViewController : UIViewController
 
 @end
