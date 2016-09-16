@@ -12,7 +12,8 @@
 
 @interface MenuListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *foods;
+@property (nonatomic, strong) NSMutableArray *foods;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -37,7 +38,7 @@
     chicken.foodImage = @"chicken";
     chicken.foodDescription = @"Marinada en aceite de oliva, romero y ajo. Servida con berenjenas a la parrilla.";
     
-    self.foods = [NSArray arrayWithObjects:spaghetti, fish, chicken, nil];
+    self.foods = [NSMutableArray arrayWithObjects:spaghetti, fish, chicken, nil];
 }
 
 - (void)didReceiveMemoryWarning {
