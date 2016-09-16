@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* foodDescription;
+@property (nonatomic, strong) NSString* foodImage;
 @property (nonatomic, assign) float value;
 
 @end
