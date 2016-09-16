@@ -54,6 +54,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D96AEC01D8C34300005D904 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F8498041D75B64900C3E9A7 /* Food.h */,
+				9F8498051D75B64900C3E9A7 /* Food.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6D96AEC11D8C343C0005D904 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC903ECB1D7475FF00E6B43A /* ViewController.h */,
+				AC903ECC1D7475FF00E6B43A /* ViewController.m */,
+				378D93351D8B93D000B09A98 /* MenuListViewController.h */,
+				378D93361D8B93D000B09A98 /* MenuListViewController.m */,
+				378D933E1D8BACE100B09A98 /* MenuGridViewController.h */,
+				378D933F1D8BACE100B09A98 /* MenuGridViewController.m */,
+				378D93381D8B946400B09A98 /* FoodTableViewCell.h */,
+				378D93391D8B946400B09A98 /* FoodTableViewCell.m */,
+				378D933B1D8BACC600B09A98 /* FoodCollectionViewCell.h */,
+				378D933C1D8BACC600B09A98 /* FoodCollectionViewCell.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		AC903EB91D7475FF00E6B43A = {
 			isa = PBXGroup;
 			children = (
@@ -73,25 +99,15 @@
 		AC903EC41D7475FF00E6B43A /* iFood */ = {
 			isa = PBXGroup;
 			children = (
+				6D96AEC11D8C343C0005D904 /* ViewControllers */,
+				6D96AEC01D8C34300005D904 /* Models */,
 				AC903EC81D7475FF00E6B43A /* AppDelegate.h */,
 				AC903EC91D7475FF00E6B43A /* AppDelegate.m */,
-				AC903ECB1D7475FF00E6B43A /* ViewController.h */,
-				AC903ECC1D7475FF00E6B43A /* ViewController.m */,
-				378D93351D8B93D000B09A98 /* MenuListViewController.h */,
-				378D93361D8B93D000B09A98 /* MenuListViewController.m */,
-				378D933E1D8BACE100B09A98 /* MenuGridViewController.h */,
-				378D933F1D8BACE100B09A98 /* MenuGridViewController.m */,
-				378D93381D8B946400B09A98 /* FoodTableViewCell.h */,
-				378D93391D8B946400B09A98 /* FoodTableViewCell.m */,
-				378D933B1D8BACC600B09A98 /* FoodCollectionViewCell.h */,
-				378D933C1D8BACC600B09A98 /* FoodCollectionViewCell.m */,
 				AC903ECE1D7475FF00E6B43A /* Main.storyboard */,
 				AC903ED11D7475FF00E6B43A /* Assets.xcassets */,
 				AC903ED31D7475FF00E6B43A /* LaunchScreen.storyboard */,
 				AC903ED61D7475FF00E6B43A /* Info.plist */,
 				AC903EC51D7475FF00E6B43A /* Supporting Files */,
-				9F8498041D75B64900C3E9A7 /* Food.h */,
-				9F8498051D75B64900C3E9A7 /* Food.m */,
 			);
 			path = iFood;
 			sourceTree = "<group>";
