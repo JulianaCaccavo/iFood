@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -265,6 +265,11 @@
                                     <outlet property="delegate" destination="B8U-0k-Pwi" id="jp3-YJ-4qN"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lyD-Ai-wag">
+                                <frame key="frameInset" minX="177" minY="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.42352941179999998" green="0.85490196080000003" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.95647905764659691" green="0.95647905764659691" blue="0.95647905764659691" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -276,6 +281,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="ListIcon_empty" selectedImage="ListIcon_full" id="AHy-Nt-fRA"/>
                     <connections>
+                        <outlet property="indicatorView" destination="lyD-Ai-wag" id="GZ2-bU-oca"/>
                         <outlet property="tableView" destination="X4S-Qp-ADT" id="9Xi-ae-jF9"/>
                     </connections>
                 </viewController>
@@ -342,6 +348,11 @@
                                     <outlet property="dataSource" destination="Ca8-O2-px1" id="jgG-UO-iU5"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-Ij-JGV">
+                                <frame key="frameInset" minX="177" minY="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.42352941179999998" green="0.85490196080000003" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -354,6 +365,7 @@
                     <tabBarItem key="tabBarItem" title="Grid" image="GridIcon_empty" selectedImage="GridIcon_Full" id="zQy-RH-M0q"/>
                     <connections>
                         <outlet property="collectionView" destination="Tjd-1D-DP4" id="ERa-k2-Spb"/>
+                        <outlet property="indicatorView" destination="mlf-Ij-JGV" id="yBb-Pa-ody"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rlg-5s-ekS" userLabel="First Responder" sceneMemberID="firstResponder"/>

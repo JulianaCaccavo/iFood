@@ -1,20 +1,20 @@
 //
-//  ViewController.m
+//  SettingsViewController.m
 //  iFood
 //
 //  Created by Juliana Caccavo on 8/29/16.
 //  Copyright © 2016 Acamica. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SettingsViewController.h"
 
-@interface ViewController ()
+@interface SettingsViewController ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 
 @end
 
-@implementation ViewController
+@implementation SettingsViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

@@ -13,6 +13,7 @@
 @interface MenuListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -30,7 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// Esto debe estar en una layer de networking, veremos como trabajar con esta arquitectura mas adelante
 - (void) remoteCall {
+    
+    self.indicatorView.hidden = NO;
     
     NSString *url = @"https://api.myjson.com/bins/1essw";
     
@@ -42,9 +47,15 @@
     __weak MenuListViewController *weakSelf = self;
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+       
+        // Escondemos
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.indicatorView.hidden = YES;
+        });
+        
         if (!error)
         {
-            // Successful Response
+            // Respuesta existosa
             if ([response isKindOfClass:[NSHTTPURLResponse class]])
             {
                 // Utilizamos NSJSONSerialization para convertir el JSON recibido en un Dictionary.
@@ -52,28 +63,9 @@
                 NSArray *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                 if (!jsonError)
                 {
-                    // Success Parsing JSON
                     // Procesamos la info para actualizar nuestra tabla, siempre en el main thread
                     
-                    [self serviceDidRespond:jsonResponse];
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        weakSelf.foods = [[NSMutableArray alloc] init];
-                        
-                        for (NSDictionary *element in jsonResponse){
-                            
-                            Food *food = [[Food alloc] init];
-                            food.name = [element objectForKey:@"name"];
-                            food.foodImage = [element objectForKey:@"foodImage"];
-                            food.foodDescription = [element objectForKey:@"foodDescription"];
-                            
-                            [weakSelf.foods addObject:food];
-                        }
-                        
-                        [weakSelf.tableView reloadData];
-                        
-                    });
+                    [weakSelf serviceDidRespond:jsonResponse];
                 }
             }
             else
@@ -136,10 +128,5 @@
     return cell;
 }
 
-#pragma mark UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 114;
-}
 
 @end

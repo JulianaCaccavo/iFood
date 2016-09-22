@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SettingsViewController.h
 //  iFood
 //
 //  Created by Juliana Caccavo on 8/29/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SettingsViewController : UIViewController
 
 
 @end

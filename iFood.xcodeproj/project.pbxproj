@@ -14,7 +14,7 @@
 		9F8498061D75B64900C3E9A7 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8498051D75B64900C3E9A7 /* Food.m */; };
 		AC903EC71D7475FF00E6B43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC61D7475FF00E6B43A /* main.m */; };
 		AC903ECA1D7475FF00E6B43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903EC91D7475FF00E6B43A /* AppDelegate.m */; };
-		AC903ECD1D7475FF00E6B43A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903ECC1D7475FF00E6B43A /* ViewController.m */; };
+		AC903ECD1D7475FF00E6B43A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC903ECC1D7475FF00E6B43A /* SettingsViewController.m */; };
 		AC903ED01D7475FF00E6B43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC903ECE1D7475FF00E6B43A /* Main.storyboard */; };
 		AC903ED21D7475FF00E6B43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC903ED11D7475FF00E6B43A /* Assets.xcassets */; };
 		AC903ED51D7475FF00E6B43A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC903ED31D7475FF00E6B43A /* LaunchScreen.storyboard */; };
@@ -35,8 +35,8 @@
 		AC903EC61D7475FF00E6B43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC903EC81D7475FF00E6B43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC903EC91D7475FF00E6B43A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AC903ECB1D7475FF00E6B43A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AC903ECC1D7475FF00E6B43A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC903ECB1D7475FF00E6B43A /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AC903ECC1D7475FF00E6B43A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AC903ECF1D7475FF00E6B43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC903ED11D7475FF00E6B43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC903ED41D7475FF00E6B43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 		6D96AEC11D8C343C0005D904 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC903ECB1D7475FF00E6B43A /* ViewController.h */,
-				AC903ECC1D7475FF00E6B43A /* ViewController.m */,
+				AC903ECB1D7475FF00E6B43A /* SettingsViewController.h */,
+				AC903ECC1D7475FF00E6B43A /* SettingsViewController.m */,
 				378D93351D8B93D000B09A98 /* MenuListViewController.h */,
 				378D93361D8B93D000B09A98 /* MenuListViewController.m */,
 				378D933E1D8BACE100B09A98 /* MenuGridViewController.h */,
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378D933D1D8BACC600B09A98 /* FoodCollectionViewCell.m in Sources */,
-				AC903ECD1D7475FF00E6B43A /* ViewController.m in Sources */,
+				AC903ECD1D7475FF00E6B43A /* SettingsViewController.m in Sources */,
 				378D93401D8BACE100B09A98 /* MenuGridViewController.m in Sources */,
 				9F8498061D75B64900C3E9A7 /* Food.m in Sources */,
 				378D93371D8B93D000B09A98 /* MenuListViewController.m in Sources */,
