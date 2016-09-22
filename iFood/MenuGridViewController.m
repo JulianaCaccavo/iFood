@@ -12,7 +12,7 @@
 
 @interface MenuGridViewController () <UICollectionViewDataSource>
 
-@property (nonatomic, strong) NSArray *foods;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -20,29 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    Food *spaghetti = [[Food alloc] init];
-    spaghetti.name = @"Spaghetti";
-    spaghetti.foodImage = @"spaghetti";
-    spaghetti.foodDescription = @"Con queso gorgonzola, parmesano, trocitos de tocino y un toque de pan molido.";
-    
-    Food *fish = [[Food alloc] init];
-    fish.name = @"Filete de pescado";
-    fish.foodImage = @"fish";
-    fish.foodDescription = @"Montado sobre papa martajada, bañado con salsa de jitomate, aceitunas negras, alcaparras y supremas de naranja.";
-    
-    Food *chicken = [[Food alloc] init];
-    chicken.name = @"Pechuga de pollo";
-    chicken.foodImage = @"chicken";
-    chicken.foodDescription = @"Marinada en aceite de oliva, romero y ajo. Servida con berenjenas a la parrilla.";
-
-    self.foods = [NSArray arrayWithObjects:spaghetti, fish, chicken, nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) reloadData {
+    [self.collectionView reloadData];
 }
 
 #pragma mark UICollectionViewDataSource
@@ -60,5 +46,6 @@
     
     return cell;
 }
+
 
 @end

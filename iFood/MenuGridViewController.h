@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuListViewController.h"
 
-@interface MenuGridViewController : UIViewController
+@interface MenuGridViewController : MenuListViewController
 
 @end

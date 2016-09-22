@@ -12,7 +12,6 @@
 
 @interface MenuListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray *foods;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
@@ -33,7 +32,7 @@
 
 - (void) remoteCall {
     
-    NSString *url = @"https://api.myjson.com/bins/2f2qi";
+    NSString *url = @"https://api.myjson.com/bins/1essw";
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
@@ -50,11 +49,13 @@
             {
                 // Utilizamos NSJSONSerialization para convertir el JSON recibido en un Dictionary.
                 NSError *jsonError;
-                NSArray *jsonResponse = [NSJSONSerialization    JSONObjectWithData:data options:0 error:&jsonError];
+                NSArray *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
                 if (!jsonError)
                 {
                     // Success Parsing JSON
                     // Procesamos la info para actualizar nuestra tabla, siempre en el main thread
+                    
+                    [self serviceDidRespond:jsonResponse];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
@@ -91,6 +92,33 @@
     
 }
 
+
+- (void) serviceDidRespond: (NSArray*) array {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        self.foods = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *element in array){
+            
+            Food *food = [[Food alloc] init];
+            food.name = [element objectForKey:@"name"];
+            food.foodImage = [element objectForKey:@"foodImage"];
+            food.foodDescription = [element objectForKey:@"foodDescription"];
+            
+            [self.foods addObject:food];
+        }
+        
+        [self reloadData];
+        
+    });
+
+}
+
+- (void) reloadData {
+    [self.tableView reloadData];
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -111,7 +139,7 @@
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 114;
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface MenuListViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *foods;
+
 @end
