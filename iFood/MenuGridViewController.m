@@ -47,5 +47,13 @@
     return cell;
 }
 
+#pragma mark UICollectionViewDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    int padding = 12;
+    CGFloat cellWidthHeight = (collectionView.frame.size.width / 2) - padding;
+    return CGSizeMake(cellWidthHeight, cellWidthHeight);
+}
+
 
 @end
