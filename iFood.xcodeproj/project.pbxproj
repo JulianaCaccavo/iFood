@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6004E70B1EC5F6F100F3A2DC /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004E70A1EC5F6F100F3A2DC /* MenuService.swift */; };
+		6004E70E1EC6027100F3A2DC /* FoodParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004E70D1EC6027100F3A2DC /* FoodParser.swift */; };
 		600C36801EC0B2B500B9A449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C367F1EC0B2B500B9A449 /* AppDelegate.swift */; };
 		600C36851EC0B2B500B9A449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600C36831EC0B2B500B9A449 /* Main.storyboard */; };
 		600C36871EC0B2B500B9A449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600C36861EC0B2B500B9A449 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6004E70A1EC5F6F100F3A2DC /* MenuService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		6004E70D1EC6027100F3A2DC /* FoodParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodParser.swift; sourceTree = "<group>"; };
 		600C367C1EC0B2B500B9A449 /* iFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		600C367F1EC0B2B500B9A449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		600C36841EC0B2B500B9A449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6004E7091EC5F6DE00F3A2DC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6004E70A1EC5F6F100F3A2DC /* MenuService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6004E70C1EC6026500F3A2DC /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				6004E70D1EC6027100F3A2DC /* FoodParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
 		600C36731EC0B2B500B9A449 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +84,8 @@
 		600C367E1EC0B2B500B9A449 /* iFood */ = {
 			isa = PBXGroup;
 			children = (
+				6004E70C1EC6026500F3A2DC /* Parsers */,
+				6004E7091EC5F6DE00F3A2DC /* Networking */,
 				600C36911EC0B4D000B9A449 /* Controllers */,
 				600C36931EC0B4D000B9A449 /* Models */,
 				600C36941EC0B4D000B9A449 /* Views */,
@@ -178,8 +200,10 @@
 			files = (
 				600C36801EC0B2B500B9A449 /* AppDelegate.swift in Sources */,
 				600C36971EC0B75700B9A449 /* Food.swift in Sources */,
+				6004E70B1EC5F6F100F3A2DC /* MenuService.swift in Sources */,
 				600C36991EC0C52B00B9A449 /* SettingsViewController.swift in Sources */,
 				608E417F1EC35C4800980192 /* MenuGridViewController.swift in Sources */,
+				6004E70E1EC6027100F3A2DC /* FoodParser.swift in Sources */,
 				600C369B1EC0D77800B9A449 /* MenuListViewController.swift in Sources */,
 				608E417D1EC3552700980192 /* FoodTableViewCell.swift in Sources */,
 				608E41811EC35D8C00980192 /* FoodCollectionViewCell.swift in Sources */,
