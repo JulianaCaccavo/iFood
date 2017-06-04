@@ -34,55 +34,10 @@ class MenuListViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.indicatorView?.isHidden = false
         
-        let url = URL(string: "https://api.myjson.com/bins/1essw")
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        
-        unowned let this = self
-        
-        let task = session.dataTask(with: url!) { (data, response, error) in
-            
-            DispatchQueue.main.async {
-                this.indicatorView?.isHidden = true
-            }
-            
-            if error != nil {
-                //Devolver un error
-                return
-            }
-            
-            guard let responseData = data else {
-                //Devolver un error
-                return
-            }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: responseData, options: []) as! [Any]
-                
-                this.serviceDidRespond(json)
-                
-            }
-            catch {
-                //Devolver un error
-                return
-            }
-            
-        }
-        
-        task.resume()
-        
-    }
-    
-    func serviceDidRespond(_ json: [Any]) {
-        
-        DispatchQueue.main.async {
-            self.foods = [Food]()
-            
-            for obj in json  {
-                let food = Food(obj as! [String : Any])
-                self.foods.append(food)
-            }
-            self.tableView?.reloadData()
+        MenuService.getMenu({ (foods) in
+            self.foods = foods
+        }) { (errorString) in
+            //Display error
         }
         
     }
