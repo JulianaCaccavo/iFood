@@ -33,7 +33,11 @@ class RestaurantService {
                 let json = try JSONSerialization.jsonObject(with: responseData, options: []) as! [Any]
                 
                 let restaurants = parseJsonArray(json)
-                responseHandler(restaurants)
+                
+                DispatchQueue.main.async {
+                    // Update UI
+                    responseHandler(restaurants)
+                }
                 
             }
             catch {

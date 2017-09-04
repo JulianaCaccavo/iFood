@@ -11,11 +11,11 @@ import Foundation
 struct FoodParser {
     
     //Suponiendo que obtengamos un array
-    func parseJsonArray(_ json: [Any]) -> [Food] {
+    func parseJsonArray(array: [Any]) -> [Food] {
         
         var foods = [Food]()
         
-        for obj in json  {
+        for obj in array  {
             let food = Food(obj as! [String : Any])
             foods.append(food)
         }

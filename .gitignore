@@ -59,7 +59,7 @@ Carthage/Build
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
-
+.DS_Store
 
 iFood.xcodeproj/project.xcworkspace/xcuserdata/
 iFood.xcodeproj/xcuserdata/

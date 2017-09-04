@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var indicatorView: UIActivityIndicatorView?
@@ -17,7 +17,6 @@ class MenuListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.remoteCall()
     }
 
@@ -29,21 +28,32 @@ class MenuListViewController: UIViewController, UITableViewDelegate, UITableView
 
     //MARK - Service Call
     
-    // Esto debe estar en una layer de networking, veremos como trabajar con esta arquitectura mas adelante
+    // Esto debe estar en una layer de networking,
+    // veremos como trabajar con esta arquitectura mas adelante
     func remoteCall() {
         
         self.indicatorView?.isHidden = false
         
-        MenuService.getMenu({ (foods) in
-            self.foods = foods
+        MenuService.getMenu({ [weak self] (foods) in
+            self?.foods = foods
+            self?.reloadDataIfNeeded()
+            self?.indicatorView?.isHidden = true
         }) { (errorString) in
             //Display error
         }
         
     }
     
-    //MARK - UITableViewDataSource
+    func reloadDataIfNeeded() {
+        self.tableView?.reloadData()
+    }
+    
+        
+}
 
+extension MenuListViewController: UITableViewDelegate, UITableViewDataSource {
+    //MARK - UITableViewDataSource
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.foods.count
@@ -60,8 +70,5 @@ class MenuListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
         
     }
-    
-        
 }
-
 

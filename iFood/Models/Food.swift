@@ -10,7 +10,7 @@ import UIKit
 
 class Food: NSObject {
 
-    var name: String = ""
+    var name = ""
     var foodDescription: String = ""
     var foodImage: String = ""
     var value: Float = 0

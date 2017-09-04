@@ -10,10 +10,10 @@ import UIKit
 
 class FoodTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var titleLabel:UILabel?
-    @IBOutlet private weak var descriptionLabel:UILabel?
-    @IBOutlet private weak var foodImageView:UIImageView?
-    @IBOutlet private weak var containerView: UIView?
+    @IBOutlet private weak var titleLabel:UILabel!
+    @IBOutlet private weak var descriptionLabel:UILabel!
+    @IBOutlet private weak var foodImageView:UIImageView!
+    @IBOutlet private weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +29,8 @@ class FoodTableViewCell: UITableViewCell {
     func updateData(_ food: Food) {
         titleLabel?.text = food.name
         descriptionLabel?.text = food.foodDescription
-        imageView?.image = UIImage(named: food.name)
+        foodImageView?.image = UIImage(named: food.foodImage)
+        foodImageView.contentMode = .scaleAspectFit
     }
     
 }
