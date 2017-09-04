@@ -16,7 +16,8 @@ class FoodCollectionViewCell: UICollectionViewCell {
     
     func updateData(_ food: Food) {
         titleLabel?.text = food.name
-        foodImageView?.image = UIImage(named: food.name)
+        foodImageView?.image = UIImage(named: food.foodImage)
+        foodImageView?.sizeToFit()
     }
     
 }

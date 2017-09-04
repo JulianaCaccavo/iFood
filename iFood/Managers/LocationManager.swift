@@ -19,7 +19,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     static let sharedInstance = LocationManager()
     
-    var delegate: LocationManagerDelegate?
+    weak var delegate: LocationManagerDelegate?
     let manager = CLLocationManager()
     
     private override init() {
@@ -106,7 +106,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("🛰 Location Update \(locations)")
-        decodeLocation(locations[0])
+        for location in locations {
+            decodeLocation(location)
+        }
     }
     
     //MARK - Reverse Geocoding

@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MenuGridViewController: MenuListViewController, UICollectionViewDataSource {
+class MenuGridViewController: MenuListViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet private weak var collectionView: UICollectionView?
     
-
+    override func reloadDataIfNeeded() {
+        self.collectionView?.reloadData()
+    }
     
     //MARK - CollectionViewDataSource
     

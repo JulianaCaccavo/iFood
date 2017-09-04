@@ -33,7 +33,11 @@ class MenuService {
                 let json = try JSONSerialization.jsonObject(with: responseData, options: []) as! [Any]
                 
                 let foods = parseJsonArray(json)
-                responseHandler(foods)
+                DispatchQueue.main.async {
+                    // Update UI
+                    responseHandler(foods)
+                }
+                
                 
             }
             catch {

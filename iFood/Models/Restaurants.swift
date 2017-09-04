@@ -23,7 +23,7 @@ class Restaurant: NSObject, MKAnnotation {
         self.title = dict["name"] as? String
         self.subtitle = dict["tipoComida"] as? String
         
-        if let latLong = dict["coordenadas"] as! [Double]? {
+        if let latLong = dict["coordenadas"] as? [Double] {
             self.coordinate.latitude = latLong[0]
             self.coordinate.longitude = latLong[1]
         }
