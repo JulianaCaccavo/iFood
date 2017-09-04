@@ -16,6 +16,11 @@
 		600C36971EC0B75700B9A449 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C36961EC0B75700B9A449 /* Food.swift */; };
 		600C36991EC0C52B00B9A449 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C36981EC0C52B00B9A449 /* SettingsViewController.swift */; };
 		600C369B1EC0D77800B9A449 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C369A1EC0D77800B9A449 /* MenuListViewController.swift */; };
+		60459A7F1ED5F88E00BF9717 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60459A7E1ED5F88E00BF9717 /* MapViewController.swift */; };
+		60459A821ED6068500BF9717 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60459A811ED6068500BF9717 /* MapKit.framework */; };
+		60730B621EDC5C5400178E95 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60730B611EDC5C5400178E95 /* RestaurantService.swift */; };
+		60730B641EDC5C9500178E95 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60730B631EDC5C9500178E95 /* Restaurants.swift */; };
+		608AD2F61ED3231D00DA9C11 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608AD2F51ED3231D00DA9C11 /* LocationManager.swift */; };
 		608E417D1EC3552700980192 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E417C1EC3552700980192 /* FoodTableViewCell.swift */; };
 		608E417F1EC35C4800980192 /* MenuGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E417E1EC35C4800980192 /* MenuGridViewController.swift */; };
 		608E41811EC35D8C00980192 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E41801EC35D8C00980192 /* FoodCollectionViewCell.swift */; };
@@ -33,9 +38,15 @@
 		600C36961EC0B75700B9A449 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		600C36981EC0C52B00B9A449 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		600C369A1EC0D77800B9A449 /* MenuListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
+		60459A7E1ED5F88E00BF9717 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		60459A811ED6068500BF9717 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		60730B611EDC5C5400178E95 /* RestaurantService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		60730B631EDC5C9500178E95 /* Restaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
+		608AD2F51ED3231D00DA9C11 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		608E417C1EC3552700980192 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		608E417E1EC35C4800980192 /* MenuGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGridViewController.swift; sourceTree = "<group>"; };
 		608E41801EC35D8C00980192 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		609CECF71ED3530800E94E40 /* PlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PlayGround.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60459A821ED6068500BF9717 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6004E70A1EC5F6F100F3A2DC /* MenuService.swift */,
+				60730B611EDC5C5400178E95 /* RestaurantService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -70,6 +83,7 @@
 			children = (
 				600C367E1EC0B2B500B9A449 /* iFood */,
 				600C367D1EC0B2B500B9A449 /* Products */,
+				60459A801ED6068500BF9717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,16 +98,18 @@
 		600C367E1EC0B2B500B9A449 /* iFood */ = {
 			isa = PBXGroup;
 			children = (
+				600C367F1EC0B2B500B9A449 /* AppDelegate.swift */,
+				600C36911EC0B4D000B9A449 /* Controllers */,
+				600C36941EC0B4D000B9A449 /* Views */,
+				608AD2F41ED3230900DA9C11 /* Managers */,
 				6004E70C1EC6026500F3A2DC /* Parsers */,
 				6004E7091EC5F6DE00F3A2DC /* Networking */,
-				600C36911EC0B4D000B9A449 /* Controllers */,
 				600C36931EC0B4D000B9A449 /* Models */,
-				600C36941EC0B4D000B9A449 /* Views */,
-				600C367F1EC0B2B500B9A449 /* AppDelegate.swift */,
 				600C36831EC0B2B500B9A449 /* Main.storyboard */,
 				600C36861EC0B2B500B9A449 /* Assets.xcassets */,
 				600C36881EC0B2B500B9A449 /* LaunchScreen.storyboard */,
 				600C368B1EC0B2B500B9A449 /* Info.plist */,
+				609CECF71ED3530800E94E40 /* PlayGround.playground */,
 			);
 			path = iFood;
 			sourceTree = "<group>";
@@ -104,6 +120,7 @@
 				600C36981EC0C52B00B9A449 /* SettingsViewController.swift */,
 				600C369A1EC0D77800B9A449 /* MenuListViewController.swift */,
 				608E417E1EC35C4800980192 /* MenuGridViewController.swift */,
+				60459A7E1ED5F88E00BF9717 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				600C36961EC0B75700B9A449 /* Food.swift */,
+				60730B631EDC5C9500178E95 /* Restaurants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +141,22 @@
 				608E41801EC35D8C00980192 /* FoodCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		60459A801ED6068500BF9717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60459A811ED6068500BF9717 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		608AD2F41ED3230900DA9C11 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				608AD2F51ED3231D00DA9C11 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +191,16 @@
 				TargetAttributes = {
 					600C367B1EC0B2B500B9A449 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 9ZM7UP9YG8;
+						DevelopmentTeam = 332N44E879;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -198,8 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60459A7F1ED5F88E00BF9717 /* MapViewController.swift in Sources */,
 				600C36801EC0B2B500B9A449 /* AppDelegate.swift in Sources */,
+				60730B641EDC5C9500178E95 /* Restaurants.swift in Sources */,
 				600C36971EC0B75700B9A449 /* Food.swift in Sources */,
+				608AD2F61ED3231D00DA9C11 /* LocationManager.swift in Sources */,
+				60730B621EDC5C5400178E95 /* RestaurantService.swift in Sources */,
 				6004E70B1EC5F6F100F3A2DC /* MenuService.swift in Sources */,
 				600C36991EC0C52B00B9A449 /* SettingsViewController.swift in Sources */,
 				608E417F1EC35C4800980192 /* MenuGridViewController.swift in Sources */,
@@ -331,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZM7UP9YG8;
+				DEVELOPMENT_TEAM = 332N44E879;
 				INFOPLIST_FILE = iFood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Acamica.iFood;
@@ -344,7 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZM7UP9YG8;
+				DEVELOPMENT_TEAM = 332N44E879;
 				INFOPLIST_FILE = iFood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Acamica.iFood;
